@@ -16,12 +16,14 @@ public class NauJugador : MonoBehaviour
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        //minPantalla.x = (float)(minPantalla.x + 0.75);
-        minPantalla.x += GetComponent<SpriteRenderer>().sprite.bounds.size.x;
+        float TamNaveX = GetComponent<SpriteRenderer>().sprite.bounds.size.x * transform.localScale.x;
+        float TamNaveY = GetComponent<SpriteRenderer>().sprite.bounds.size.y / 2;
 
-        minPantalla.y = (float)(minPantalla.y + 0.65);
-        maxPantalla.x = (float)(minPantalla.x + 16.25);
-        maxPantalla.y = (float)(minPantalla.y + 8.75);
+        //minPantalla.x = (float)(minPantalla.x + 0.75);
+        minPantalla.x += TamNaveX;
+        minPantalla.y += TamNaveY;
+        maxPantalla.x -= TamNaveX;
+        maxPantalla.y -= TamNaveY;
     }
 
     // Update is called once per frame
