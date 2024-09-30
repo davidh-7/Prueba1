@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 0fedb2d3302b4b04e8b211f43c01d5d9
+guid: 847cf417322f5d943814509e566738eb
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - PrfabProyectil: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
