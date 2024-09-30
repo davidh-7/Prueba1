@@ -17,7 +17,7 @@ public class NauJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vel = 8;
+        vel = 8f;
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 

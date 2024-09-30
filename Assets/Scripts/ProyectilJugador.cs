@@ -10,7 +10,7 @@ public class ProyectilJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vel = 13;
+        vel = 13f;
         maxpantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
         
     }
