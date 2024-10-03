@@ -11,8 +11,8 @@ public class ProyectilJugador : MonoBehaviour
     void Start()
     {
         vel = 13f;
-        maxpantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
-        
+        maxpantalla = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
     }
 
     // Update is called once per frame
@@ -22,8 +22,24 @@ public class ProyectilJugador : MonoBehaviour
         posAct = posAct + new Vector2(0, 1) * vel * Time.deltaTime;
         transform.position = posAct;
 
-        if (transform.position.y > maxpantalla.y){
-        Destroy(gameObject);
+        if (transform.position.y > maxpantalla.y)
+        {
+            Destroy(gameObject);
         }
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D ObjTocado)
+    {
+        if (ObjTocado.tag == "Numero")
+        {
+
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }
+     

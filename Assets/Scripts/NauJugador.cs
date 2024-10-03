@@ -68,5 +68,16 @@ public class NauJugador : MonoBehaviour
 
         transform.position = nuevaPosi;
     }
+
+   private void OnTriggerEnter2D(Collider2D ObjTocado)
+    {
+        if (ObjTocado.tag =="Numero") { 
+        
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }
     
