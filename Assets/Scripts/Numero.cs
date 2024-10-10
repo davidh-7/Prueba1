@@ -46,6 +46,7 @@ public class Numero : MonoBehaviour
         {
             GameObject explosion = Instantiate(PrfabExplosion);
             explosion.transform.position = transform.position;
+            DatosGlobales.puntos = DatosGlobales.puntos + numero;
             Destroy(gameObject);
         }
     }
