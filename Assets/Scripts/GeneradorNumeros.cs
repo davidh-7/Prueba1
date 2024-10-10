@@ -32,4 +32,7 @@ public class GeneradorNumeros : MonoBehaviour
     {
         
     }
+
+
+
 }

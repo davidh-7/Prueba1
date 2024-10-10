@@ -12,8 +12,8 @@ public class NauJugador : MonoBehaviour
     private Vector2 maxPantalla;
 
     [SerializeField] private GameObject PrfabProyectil;
+    [SerializeField] private GameObject PrfabExplosion;
 
- 
     // Start is called before the first frame update
     void Start()
     {
@@ -71,8 +71,10 @@ public class NauJugador : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D ObjTocado)
     {
-        if (ObjTocado.tag =="Numero") { 
-        
+        if (ObjTocado.tag =="Numero") {
+
+            GameObject explosion = Instantiate(PrfabExplosion);
+            explosion.transform.position = transform.position;
             Destroy(gameObject);
         }
     }

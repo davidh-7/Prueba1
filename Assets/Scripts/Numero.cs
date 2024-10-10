@@ -11,7 +11,7 @@ public class Numero : MonoBehaviour
     public Sprite[]  PossiNum = new Sprite[10];
 
     private int numero;
-
+    [SerializeField] private GameObject PrfabExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +44,8 @@ public class Numero : MonoBehaviour
     {
         if (ObjTocado.tag == "ProyectilJugador" || ObjTocado.tag == "NauJugador")
         {
-
+            GameObject explosion = Instantiate(PrfabExplosion);
+            explosion.transform.position = transform.position;
             Destroy(gameObject);
         }
     }

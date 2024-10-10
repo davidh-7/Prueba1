@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 2104817378}
   m_Layer: 0
   m_Name: NaveJugador
-  m_TagString: Untagged
+  m_TagString: NauJugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,7 +430,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

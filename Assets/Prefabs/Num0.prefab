@@ -110,6 +110,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 94634ae387a5a9844aa170228fe8b664, type: 3}
   - {fileID: 21300000, guid: 95cad98ac27722d4c9e12de9f22e36c0, type: 3}
   - {fileID: 21300000, guid: fda76a2ae9d3ff049b38b55bb05f968d, type: 3}
+  PrfabExplosion: {fileID: 8025727849263857290, guid: f847fd123f8622544ac6796f20411b49, type: 3}
 --- !u!61 &-994493579386448857
 BoxCollider2D:
   m_ObjectHideFlags: 0
