@@ -11,8 +11,11 @@ public class NauJugador : MonoBehaviour
     private Vector2 minPantalla;
     private Vector2 maxPantalla;
 
+    private int VidaJug;
+
     [SerializeField] private GameObject PrfabProyectil;
     [SerializeField] private GameObject PrfabExplosion;
+    [SerializeField] private TMPro.TextMeshProUGUI texto;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,8 @@ public class NauJugador : MonoBehaviour
         minPantalla.y += TamNaveY;
         maxPantalla.x -= TamNaveX;
         maxPantalla.y -= TamNaveY;
+
+        VidaJug = 3;
     }
 
     // Update is called once per frame
@@ -38,6 +43,8 @@ public class NauJugador : MonoBehaviour
         MovimientoNave();
         DisparaProyectil();
     }
+
+
 
     private void DisparaProyectil()
     {
@@ -69,17 +76,24 @@ public class NauJugador : MonoBehaviour
         transform.position = nuevaPosi;
     }
 
-   private void OnTriggerEnter2D(Collider2D ObjTocado)
+    private void OnTriggerEnter2D(Collider2D ObjTocado)
     {
-        if (ObjTocado.tag =="Numero") {
 
-            GameObject explosion = Instantiate(PrfabExplosion);
-            explosion.transform.position = transform.position;
-            Destroy(gameObject);
+
+        if (ObjTocado.tag == "Numero")
+        {
+            VidaJug--;
+            texto.text = "Vida :" + VidaJug.ToString();
+
+            if (VidaJug < 0)
+            {
+                GameObject explosion = Instantiate(PrfabExplosion);
+                explosion.transform.position = transform.position;
+                Destroy(gameObject);
+            }
         }
+
+
     }
-
-
-
 }
     
