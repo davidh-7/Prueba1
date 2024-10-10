@@ -1,7 +1,9 @@
 using System;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vector2 = UnityEngine.Vector2;
 
 public class NauJugador : MonoBehaviour
@@ -85,10 +87,12 @@ public class NauJugador : MonoBehaviour
             VidaJug--;
             texto.text = "Vida :" + VidaJug.ToString();
 
-            if (VidaJug < 0)
+            if (VidaJug == 0)
             {
                 GameObject explosion = Instantiate(PrfabExplosion);
                 explosion.transform.position = transform.position;
+                SceneManager.LoadScene("PantallaResultados");
+
                 Destroy(gameObject);
             }
         }
